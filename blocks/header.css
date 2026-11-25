@@ -8,7 +8,7 @@
   height: 100vh;
   width: 150px;
   box-sizing: border-box;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   background-color: #fff;
   padding: 10px;
@@ -37,16 +37,19 @@ You can adjust those independently to get the dotted appearance you want. */
 
 .header__categories {
   display: flex;
-  flex: 1;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  color: black;
-  gap: 30px;
-  list-style: none;
+
+  width: 100%;
   height: 100%;
+
+  color: black;
+  gap: 20px;
+  list-style: none;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 10px;
+
   font-size: 15px;
+  text-align: center;
 }

@@ -2,6 +2,8 @@
   padding: 20px 30px;
   box-sizing: border-box;
   margin-left: 150px;
+  min-width: 0;
+  flex: 1;
 }
 
 .main__profile {
@@ -17,16 +19,18 @@
   max-width: 200px;
   max-height: 200px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .main__description {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
 }
 
 .main__title {
-  margin: 0 0 12px 0;
+  margin: 0 0 12px;
   font-size: 32px;
   font-weight: 500;
   color: #212121;
@@ -71,10 +75,12 @@
 }
 
 .main__adventure-video {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .main__adventure-name {
@@ -85,4 +91,34 @@
 .main__adventure-location {
   margin: 0;
   font-size: 14px;
+}
+
+/* Responsive layout */
+
+@media screen and (max-width: 900px) {
+  .main__category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 15px;
+  }
+
+  .main__profile {
+    flex-direction: column;
+  }
+
+  .main__paragraph {
+    max-width: 100%;
+  }
+
+  .main__title {
+    white-space: normal;
+  }
+
+  .main__category-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -18,22 +18,38 @@
     <header class="header">
       <img src="./images/logo.png" alt="TRVL TICO logo" class="header__logo" />
 
-      <div class="header__list">
+      <nav class="header__list" aria-label="Adventure categories">
         <ul class="header__categories">
-          <li class="header__category">Camping</li>
-          <li class="header__category">Volcanic Pools</li>
-          <li class="header__category">Family Farms</li>
-          <li class="header__category">Hiking</li>
-          <li class="header__category">Waterfalls</li>
-          <li class="header__category">Restaurants</li>
+          <li class="header__category">
+            <a href="#camping">Camping</a>
+          </li>
+          <li class="header__category">
+            <a href="#volcanic-pools">Volcanic Pools</a>
+          </li>
+          <li class="header__category">
+            <a href="#family-farms">Family Farms</a>
+          </li>
+          <li class="header__category">
+            <a href="#hiking">Hiking</a>
+          </li>
+          <li class="header__category">
+            <a href="#waterfalls">Waterfalls</a>
+          </li>
+          <li class="header__category">
+            <a href="#restaurants">Restaurants</a>
+          </li>
         </ul>
-      </div>
+      </nav>
     </header>
 
     <main class="main">
-      <!-- STARTING main PIC & DESCRIPTION -->
+      <!-- Profile and introduction -->
       <section class="main__profile">
-        <img src="./images/me-rain.png" alt="Portrait" class="main__pic" />
+        <img
+          src="./images/me-rain.png"
+          alt="Portrait of the TRVL TICO creator"
+          class="main__pic"
+        />
 
         <div class="main__description">
           <h1 class="main__title">Welcome to Costa Rica!</h1>
@@ -51,278 +67,59 @@
         </div>
       </section>
 
-      <section class="main__category">
+      <!-- Video preview modal -->
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        aria-hidden="true"
+      >
+        <div class="modal__container">
+          <div class="modal__header">
+            <p class="modal__title" id="modal-title">Preview of Video</p>
+
+            <button
+              class="modal__close-btn"
+              type="button"
+              aria-label="Close video preview"
+            >
+              &times;
+            </button>
+          </div>
+
+          <video class="modal__preview" controls playsinline></video>
+        </div>
+      </div>
+
+      <!-- Camping category -->
+      <section class="main__category" id="camping">
         <h2 class="main__category-title">Camping Adventures</h2>
 
         <div class="main__category-grid">
           <!-- Adventure Card 1 -->
-          <article class="main__adventure-card">
+
+          <div class="main__adventure-card">
             <video
               class="main__adventure-video"
-              src="./videos/camping-1.mp4"
-              poster="./images/camping-1.webp"
-              controls
-              preload="metadata"
+              src="./videos/placeholder.mov"
+              data-video="./videos/placeholder.mov"
+              autoplay
+              muted
+              loop
+              playsinline
+              tabindex="0"
+              aria-label="Mountain camping video preview"
             ></video>
+
             <h3 class="main__adventure-name">Mountain Camping</h3>
+
             <p class="main__adventure-location">Costa Rica</p>
-          </article>
-
-          <!-- Adventure Card 2 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-2.mp4"
-              poster="./images/camping-2.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Riverside Camping</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-
-          <!-- Adventure Card 3 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-3.mp4"
-              poster="./images/camping-3.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Forest Retreat</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="main__category">
-        <h2 class="main__category-title">Volcanic Pools Adventures</h2>
-
-        <div class="main__category-grid">
-          <!-- Adventure Card 1 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-1.mp4"
-              poster="./images/camping-1.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Mountain Camping</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-
-          <!-- Adventure Card 2 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-2.mp4"
-              poster="./images/camping-2.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Riverside Camping</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-
-          <!-- Adventure Card 3 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-3.mp4"
-              poster="./images/camping-3.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Forest Retreat</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="main__category">
-        <h2 class="main__category-title">Family Farm Adventures</h2>
-
-        <div class="main__category-grid">
-          <!-- Adventure Card 1 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-1.mp4"
-              poster="./images/camping-1.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Mountain Camping</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-
-          <!-- Adventure Card 2 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-2.mp4"
-              poster="./images/camping-2.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Riverside Camping</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-
-          <!-- Adventure Card 3 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-3.mp4"
-              poster="./images/camping-3.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Forest Retreat</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="main__category">
-        <h2 class="main__category-title">Hiking Adventures</h2>
-
-        <div class="main__category-grid">
-          <!-- Adventure Card 1 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-1.mp4"
-              poster="./images/camping-1.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Mountain Camping</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-
-          <!-- Adventure Card 2 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-2.mp4"
-              poster="./images/camping-2.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Riverside Camping</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-
-          <!-- Adventure Card 3 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-3.mp4"
-              poster="./images/camping-3.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Forest Retreat</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="main__category">
-        <h2 class="main__category-title">Waterfall Adventures</h2>
-
-        <div class="main__category-grid">
-          <!-- Adventure Card 1 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-1.mp4"
-              poster="./images/camping-1.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Mountain Camping</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-
-          <!-- Adventure Card 2 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-2.mp4"
-              poster="./images/camping-2.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Riverside Camping</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-
-          <!-- Adventure Card 3 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-3.mp4"
-              poster="./images/camping-3.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Forest Retreat</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="main__category">
-        <h2 class="main__category-title">Restaurant Adventures</h2>
-
-        <div class="main__category-grid">
-          <!-- Adventure Card 1 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-1.mp4"
-              poster="./images/camping-1.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Mountain Camping</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-
-          <!-- Adventure Card 2 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-2.mp4"
-              poster="./images/camping-2.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Riverside Camping</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
-
-          <!-- Adventure Card 3 -->
-          <article class="main__adventure-card">
-            <video
-              class="main__adventure-video"
-              src="./videos/camping-3.mp4"
-              poster="./images/camping-3.webp"
-              controls
-              preload="metadata"
-            ></video>
-            <h3 class="main__adventure-name">Forest Retreat</h3>
-            <p class="main__adventure-location">Costa Rica</p>
-          </article>
+          </div>
         </div>
       </section>
     </main>
 
-    <script src="./scripts/validation.js"></script>
-    <script src="./scripts/index.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
