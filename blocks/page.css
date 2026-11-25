@@ -1,9 +1,9 @@
 .page {
   background-color: #fcf5e5;
   color: #212121;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0 auto;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   box-sizing: border-box;

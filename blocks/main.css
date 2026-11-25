@@ -1,6 +1,7 @@
 .main {
   padding: 20px 30px;
   box-sizing: border-box;
+  margin-left: 150px;
 }
 
 .main__profile {
