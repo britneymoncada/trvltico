@@ -1,11 +1,12 @@
 .page {
   background-color: #fcf5e5;
   color: #212121;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  box-sizing: border-box;
 }
 
 .page__section {

@@ -1,15 +1,47 @@
 .header {
   display: flex;
-  justify-content: center;
+  width: 100vw;
   box-sizing: border-box;
+  justify-content: space-around;
+
   background-color: #fff;
-  padding: 10px 0;
-  height: 46px;
-  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border-bottom: none;
+  background-image: repeating-linear-gradient(
+    to right,
+    #212121 0px,
+    #212121 8px,
+    transparent 8px,
+    transparent 20px
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+  background-position: bottom;
 }
 
+/* - 8px = dash length.
+- 20px = total dash-and-gap length.
+- 3px = line thickness.
+This gives you precise control over the appearance of the dashed line. */
+
 .header__logo {
-  width: 94px;
-  height: 26px;
-  padding: 0;
+  height: 100%;
+  width: auto;
+}
+
+.header__categories {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  color: black;
+  gap: 30px;
+  list-style: none;
+  height: 100%;
+  margin: 0;
+  padding: 0 20px;
+  font-size: 15px;
 }
