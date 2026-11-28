@@ -1,5 +1,5 @@
 .main {
-  padding: 20px 30px;
+  padding: 30px;
   box-sizing: border-box;
   margin-left: 150px;
   min-width: 0;
@@ -25,24 +25,23 @@
 .main__description {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  min-width: 0;
+  align-items: center;
 }
 
 .main__title {
   margin: 0 0 12px;
+  text-align: center;
   font-size: 32px;
   font-weight: 500;
   color: #212121;
   padding: 0;
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
   max-width: 400px;
 }
 
 .main__paragraph {
-  margin: 0;
+  margin: 0 0 20px 0;
   font-weight: 500;
   font-size: 16px;
   max-width: 80%;
@@ -50,6 +49,7 @@
   opacity: 0.7;
   width: 100%;
   white-space: normal;
+  text-align: center;
 }
 
 .main__category {
@@ -64,7 +64,7 @@
 
 .main__category-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
   gap: 25px;
 }
 
@@ -72,6 +72,7 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
+  max-width: 350px;
 }
 
 .main__adventure-video {
@@ -93,32 +94,38 @@
   font-size: 14px;
 }
 
-/* Responsive layout */
-
-@media screen and (max-width: 900px) {
-  .main__category-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.main__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-@media screen and (max-width: 600px) {
+.main__icon {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 800px) {
   .main {
-    padding: 15px;
+    margin: 0;
   }
 
   .main__profile {
     flex-direction: column;
+    align-items: center;
   }
 
-  .main__paragraph {
-    max-width: 100%;
+  .main__description {
+    align-items: center;
   }
 
   .main__title {
-    white-space: normal;
+    font-size: 24px;
   }
 
-  .main__category-grid {
-    grid-template-columns: 1fr;
+  .main__icon {
+    width: 30px;
+    height: 30px;
   }
 }
